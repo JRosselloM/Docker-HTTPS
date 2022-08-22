@@ -10,6 +10,7 @@ RUN openssl req -x509 \
             -subj "/CN=demo.jrossello.com/C=ES/L=Balearic Islands" \
             -keyout server.key -out server.crt 
 # COPIAR EL CERTIFICADO Y LA LLAVE DENTRO DE LA CARPETA CONF
+# sed -i '/todo*/s/^#//g' ejemplo.sh
 RUN cp server.crt server.key /usr/local/apache2/conf
 
 # REEMPLAZAR TEXTO => QUITAR LOS HASTAGS PARA ELIMINAR LOS COMENTARIOS
