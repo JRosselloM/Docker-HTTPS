@@ -1,0 +1,10 @@
+services:
+  httpd:
+    image: httpd:2.4
+    container_name: httpd
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
